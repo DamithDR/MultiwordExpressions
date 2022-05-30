@@ -3,6 +3,7 @@ import os
 
 import numpy as np
 import pandas as pd
+import torch
 
 from examples.mwe.en.utils.Args import Args
 from mwe.transformers.ner_model import NERModel
@@ -80,6 +81,7 @@ def bert_based_evaluation(model):
         model_type=model_types_dict[model],
         model_name=model,
         labels=Args["tags"],
+        use_cuda=torch.cuda.is_available(),
         args={"overwrite_output_dir": True,
               "reprocess_input_data": True,
               "num_train_epochs": 3,
