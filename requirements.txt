@@ -1,0 +1,8 @@
+numpy
+pandas
+transformers~=4.18.0
+tensorboard
+seqeval
+datasets
+protobuf~=3.19.0
+sentencepiece
