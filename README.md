@@ -21,6 +21,13 @@ You can easily run experiments using following command and altering the paramete
 python -m examples.mwe.en.run --model xlm-roberta-base
 ```
 
+To run using docker, you need to have docker installed in your machine. To install docker please use [Docker installation Guide](https://docs.docker.com/get-docker/) to install docker based on your operating system.
+
+Once you successfully installed docker in your system, you can simply use following command to execute the experiments.
+```bash
+docker run damithpremasiri/transformer-based-mwe:V1.0 --model xlm-roberta-base
+```
+
 ## Parameters
 Please find the detailed descriptions of the parameters
 ```text
