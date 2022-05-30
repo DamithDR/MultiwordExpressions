@@ -9,7 +9,7 @@ Please refer to [PyTorch installation page](https://pytorch.org/get-started/loca
 When PyTorch has been installed, you can install requirements from source by cloning the repository and running:
 
 ```bash
-git clone https://github.com/DamithDR/QuestionAnswering.git
+git clone https://github.com/DamithDR/MultiwordExpressions.git
 cd MultiwordExpressions
 pip install -r requirements.txt
 ```
