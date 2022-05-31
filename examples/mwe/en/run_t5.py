@@ -10,7 +10,7 @@ MULTI_LABEL_CLASSIFICATION = "multilabel classification"
 
 model_args = {
         "max_seq_length": 196,
-        "train_batch_size": 8,
+        "train_batch_size": 16,
         "eval_batch_size": 64,
         "num_train_epochs": 3,
         "evaluate_during_training": False,
