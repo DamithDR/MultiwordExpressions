@@ -3,7 +3,7 @@
 Transformers based approach for multiword expressions detection.
 
 ## Installation
-Then you need to install PyTorch. The recommended PyTorch version is 1.11.0
+First you need to install PyTorch. The recommended PyTorch version is 1.11.0
 Please refer to [PyTorch installation page](https://pytorch.org/get-started/locally/#start-locally) for more details specifically for the platforms.
 
 When PyTorch has been installed, you can install requirements from source by cloning the repository and running:
