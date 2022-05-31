@@ -1,7 +1,8 @@
 import os
 import pandas as pd
+import torch
 
-from examples.mwe.en.run import get_sentences, set_sequence_and_clean_t5, get_sentences_t5
+from examples.mwe.en.run import set_sequence_and_clean_t5, get_sentences_t5
 from mwe.t5.t5_model import T5Model
 from mwe.transformers.util.print_stat import print_information_multi_class
 
@@ -25,7 +26,6 @@ model_args = {
 
         "reprocess_input_data": True,
         "overwrite_output_dir": True,
-
         "wandb_project": "Multi-Label-Classification",
     }
 
@@ -42,7 +42,7 @@ def t5_based_evaluation():
     df_gold = set_sequence_and_clean_t5(df_gold)
     df_gold["prefix"] = MULTI_LABEL_CLASSIFICATION
 
-    model = T5Model("t5", "t5-base", args=model_args)
+    model = T5Model("t5", "t5-base", args=model_args, use_cuda=torch.cuda.is_available())
 
     model.train_model(df_train)
 
