@@ -6,7 +6,6 @@ seqeval~=1.2.2
 datasets~=2.2.2
 protobuf~=3.19.0
 sentencepiece
-torch~=1.11.0+cu113
 tqdm~=4.64.0
 tokenizers~=0.12.1
 scikit-learn~=1.1.1
