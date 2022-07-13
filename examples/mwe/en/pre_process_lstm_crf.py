@@ -7,13 +7,13 @@ from examples.mwe.en.utils.Args import Args
 
 
 def preprocess():
-    train_f = os.path.join(".", "data", "dimsum16.train")
-    gold_test_f = os.path.join(".", "data", "dimsum16.test")
+    train_f = os.path.join(".", "data", "flower_dataset_all_final_train.tsv")
+    gold_test_f = os.path.join(".", "data", "flower_dataset_all_final_test.tsv")
     corpus_dir = os.path.join(".", "corpus_dir")
 
-    df_train = pd.read_csv(train_f, usecols=[0, 1, 4], names=["token_id", "words", "labels"], sep='\t')
+    df_train = pd.read_csv(train_f, sep='\t')
     df_train = set_sequence_and_clean(df_train)
-    df_gold = pd.read_csv(gold_test_f, usecols=[0, 1, 4], names=["token_id", "words", "labels"], sep='\t')
+    df_gold = pd.read_csv(gold_test_f, sep='\t')
     df_gold = set_sequence_and_clean(df_gold)
 
     vocab_list = list(set(df_train['words'] + df_gold['words']))

@@ -119,7 +119,9 @@ def bert_based_evaluation(model):
         "bert-base-multilingual-uncased": "bert",
         "bert-base-uncased": "bert",
         "bert-base-cased": "bert",
-        "google/electra-base-discriminator": "electra"
+        "google/electra-base-discriminator": "electra",
+        "allenai/scibert_scivocab_uncased": "bert",
+        "allenai/scibert_scivocab_cased": "bert"
     }
     print("Model detected : " + model)
     print("Model type detected : " + model_types_dict[model])
