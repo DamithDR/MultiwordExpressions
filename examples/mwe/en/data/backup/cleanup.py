@@ -1,5 +1,5 @@
 lines = []
-with open("metaphoric_flower_dataset_all_final.tsv", 'r', encoding='utf-8') as f:
+with open("flower_dataset_all_final_backup.tsv", 'r', encoding='utf-8') as f:
     lines = f.readlines()
 
 final_lines = []
@@ -11,6 +11,6 @@ for line in lines:
 
     final_lines.append(line)
 print(counter)
-with open("metaphoric_flower_dataset_all_final_cleaned.tsv", 'w', encoding='utf-8') as f:
+with open("flower_dataset_all_final_cleaned.tsv", 'w', encoding='utf-8') as f:
     f.writelines(final_lines)
 
