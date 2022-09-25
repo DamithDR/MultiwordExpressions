@@ -7,7 +7,7 @@ import torch
 
 from examples.mwe.en.utils.Args import Args
 from mwe.transformers.ner_model import NERModel
-from mwe.transformers.util.print_stat import print_information
+from mwe.transformers.util.print_stat import print_information, print_information_multi_class
 
 
 def set_sequence_and_clean(df):
@@ -106,8 +106,8 @@ def bert_based_evaluation(model):
 
     df_train = pd.read_csv(train_f, sep='\t')
     df_gold = pd.read_csv(test_f, sep='\t')
-    df_train = set_sequence_and_clean(df_train)
-    df_gold = set_sequence_and_clean(df_gold)
+    df_train_cleaned = set_sequence_and_clean(df_train)
+    df_gold_cleaned = set_sequence_and_clean(df_gold)
 
     # used models
     model_types_dict = {
@@ -133,6 +133,8 @@ def bert_based_evaluation(model):
               "reprocess_input_data": True,
               "num_train_epochs": 3,
               "train_batch_size": 32,
+              "use_multiprocessing": False,
+              "use_multiprocessing_for_evaluation": False
               },
     )
 
@@ -149,7 +151,7 @@ def bert_based_evaluation(model):
 
     df_gold['predicted'] = predicted
 
-    print_information(df_gold, "predicted", "labels")
+    print_information_multi_class(df_gold, "predicted", "labels")
 
 
 if __name__ == '__main__':
