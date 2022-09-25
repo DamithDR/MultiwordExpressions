@@ -100,7 +100,7 @@ def get_sentences_t5(df_gold):
     return sentences, tokens
 
 
-def bert_based_evaluation(model):
+def bert_based_evaluation(model,cuda_device=0):
     train_f = os.path.join(".", "examples", "mwe", "en", "data", "metaphoric_train.tsv")
     test_f = os.path.join(".", "examples", "mwe", "en", "data", "metaphoric_test.tsv")
 
@@ -129,6 +129,7 @@ def bert_based_evaluation(model):
         model_name=model,
         labels=Args["tags"],
         use_cuda=torch.cuda.is_available(),
+        cuda_device=cuda_device,
         args={"overwrite_output_dir": True,
               "reprocess_input_data": True,
               "num_train_epochs": 3,
@@ -156,6 +157,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='''evaluates models on multiword expression task''')
     parser.add_argument('--model', required=True, help='model')
+    parser.add_argument('--cuda_device', required=False, help='cuda_device', default=0)
     args = parser.parse_args()
 
-    bert_based_evaluation(args.model)
+    bert_based_evaluation(args.model,args.cuda_device)
