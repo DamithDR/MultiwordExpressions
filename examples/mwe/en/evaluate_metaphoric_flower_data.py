@@ -133,8 +133,6 @@ def bert_based_evaluation(model):
               "reprocess_input_data": True,
               "num_train_epochs": 3,
               "train_batch_size": 32,
-              "use_multiprocessing": False,
-              "use_multiprocessing_for_evaluation": False
               },
     )
 
