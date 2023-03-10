@@ -7,8 +7,8 @@ from examples.mwe.en.utils.Args import Args
 
 
 def preprocess():
-    train_f = os.path.join(".", "data", "flower_dataset_all_final_train.tsv")
-    gold_test_f = os.path.join(".", "data", "flower_dataset_all_final_test.tsv")
+    train_f = os.path.join(".", "data_backup", "flower_dataset_all_final_train.tsv")
+    gold_test_f = os.path.join(".", "data_backup", "flower_dataset_all_final_test.tsv")
     corpus_dir = os.path.join(".", "corpus_dir")
 
     df_train = pd.read_csv(train_f, sep='\t')

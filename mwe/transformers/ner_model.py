@@ -401,11 +401,11 @@ class NERModel:
         Trains the model using 'train_data'
 
         Args:
-            train_data: train_data should be the path to a .txt file containing the training data OR a pandas DataFrame with 3 columns.
-                        If a text file is given the data should be in the CoNLL format. i.e. One word per line, with sentences seperated by an empty line.
+            train_data: train_data should be the path to a .txt file containing the training data_backup OR a pandas DataFrame with 3 columns.
+                        If a text file is given the data_backup should be in the CoNLL format. i.e. One word per line, with sentences seperated by an empty line.
                         The first word of the line should be a word, and the last should be a Name Entity Tag.
                         If a DataFrame is given, each sentence should be split into words, with each word assigned a tag, and with all words from the same sentence given the same sentence_id.
-            eval_data: Evaluation data (same format as train_data) against which evaluation will be performed when evaluate_during_training is enabled. Is required if evaluate_during_training is enabled.
+            eval_data: Evaluation data_backup (same format as train_data) against which evaluation will be performed when evaluate_during_training is enabled. Is required if evaluate_during_training is enabled.
             output_dir: The directory where model files will be saved. If not given, self.args.output_dir will be used.
             show_running_loss (optional): Set to False to prevent running loss from being printed to console. Defaults to True.
             args (optional): Optional changes to the args dict of the model. Any changes made will persist for the model.
@@ -1159,8 +1159,8 @@ class NERModel:
         Evaluates the model on eval_data. Saves results to output_dir.
 
         Args:
-            eval_data: eval_data should be the path to a .txt file containing the evaluation data or a pandas DataFrame.
-                        If a text file is used the data should be in the CoNLL format. I.e. One word per line, with sentences seperated by an empty line.
+            eval_data: eval_data should be the path to a .txt file containing the evaluation data_backup or a pandas DataFrame.
+                        If a text file is used the data_backup should be in the CoNLL format. I.e. One word per line, with sentences seperated by an empty line.
                         The first word of the line should be a word, and the last should be a Name Entity Tag.
                         If a DataFrame is given, each sentence should be split into words, with each word assigned a tag, and with all words from the same sentence given the same sentence_id.
 
@@ -1710,7 +1710,7 @@ class NERModel:
         Utility function for train() and eval() methods. Not intended to be used directly.
 
         Args:
-            data: Path to a .txt file containing training or evaluation data OR a pandas DataFrame containing 3 columns - sentence_id, words, labels.
+            data: Path to a .txt file containing training or evaluation data_backup OR a pandas DataFrame containing 3 columns - sentence_id, words, labels.
                     If a DataFrame is given, each sentence should be split into words, with each word assigned a tag, and with all words from the same sentence given the same sentence_id.
             evaluate (optional): Indicates whether the examples are for evaluation or for training.
             no_cache (optional): Force feature conversion and prevent caching. I.e. Ignore cached features even if present.

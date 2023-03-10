@@ -71,7 +71,7 @@ class InputExample(object):
 
 
 class InputFeatures(object):
-    """A single set of features of data."""
+    """A single set of features of data_backup."""
 
     def __init__(self, input_ids, input_mask, segment_ids, label_ids, bboxes=None):
         self.input_ids = input_ids
@@ -431,7 +431,7 @@ def convert_examples_to_features(
     mode="dev",
     use_multiprocessing_for_evaluation=False,
 ):
-    """Loads a data file into a list of `InputBatch`s
+    """Loads a data_backup file into a list of `InputBatch`s
     `cls_token_at_end` define the location of the CLS token:
         - False (Default, BERT/XLM pattern): [CLS] + A + [SEP] + B + [SEP]
         - True (XLNet/GPT pattern): A + [SEP] + B + [SEP] + [CLS]
@@ -626,7 +626,7 @@ def load_hf_dataset(
     args=None,
 ):
     if isinstance(data, str):
-        # dataset = load_dataset("conll2003", data_files=data)
+        # dataset = load_dataset("conll2003", data_files=data_backup)
         dataset = load_dataset(
             os.path.join(
                 os.path.dirname(os.path.abspath(__file__)), "ner_dataset_loading_script"
@@ -638,7 +638,7 @@ def load_hf_dataset(
         )
     else:
         raise TypeError(
-            "{} is not a path to a data file (e.g. tsv). The input must be a data file for NERModel.".format(
+            "{} is not a path to a data_backup file (e.g. tsv). The input must be a data_backup file for NERModel.".format(
                 data
             )
         )

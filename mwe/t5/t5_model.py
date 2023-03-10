@@ -1150,7 +1150,7 @@ class T5Model:
         self, data, evaluate=False, no_cache=False, verbose=True, silent=False
     ):
         """
-        Creates a T5Dataset from data.
+        Creates a T5Dataset from data_backup.
 
         Utility function for train() and eval() methods. Not intended to be used directly.
         """

@@ -32,8 +32,8 @@ model_args = {
 def t5_based_evaluation():
     print("T5 Model Based Predictions")
 
-    train_f = os.path.join(".", "examples", "mwe", "en", "data", "dimsum16.train")
-    gold_test_f = os.path.join(".", "examples", "mwe", "en", "data", "dimsum16.test")
+    train_f = os.path.join(".", "examples", "mwe", "en", "data_backup", "dimsum16.train")
+    gold_test_f = os.path.join(".", "examples", "mwe", "en", "data_backup", "dimsum16.test")
 
     df_train = pd.read_csv(train_f, usecols=[0, 1, 4], names=["token_id", "input_text", "target_text"], sep='\t')
     df_train = set_sequence_and_clean_t5(df_train)

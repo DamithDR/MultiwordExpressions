@@ -99,8 +99,8 @@ def get_sentences_t5(df_gold):
     return sentences, tokens
 
 def bert_based_evaluation(model):
-    train_f = os.path.join(".", "examples", "mwe", "en", "data", "dimsum16.train")
-    gold_test_f = os.path.join(".", "examples", "mwe", "en", "data", "dimsum16.test")
+    train_f = os.path.join(".", "examples", "mwe", "en", "data_backup", "dimsum16.train")
+    gold_test_f = os.path.join(".", "examples", "mwe", "en", "data_backup", "dimsum16.test")
 
     df_train = pd.read_csv(train_f, usecols=[0, 1, 4], names=["token_id", "words", "labels"], sep='\t')
     df_train = set_sequence_and_clean(df_train)

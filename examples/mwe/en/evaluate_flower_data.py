@@ -101,8 +101,8 @@ def get_sentences_t5(df_gold):
 
 
 def bert_based_evaluation(model):
-    train_f = os.path.join(".", "examples", "mwe", "en", "data", "flower_dataset_all_final_train.tsv")
-    test_f = os.path.join(".", "examples", "mwe", "en", "data", "flower_dataset_all_final_test.tsv")
+    train_f = os.path.join(".", "examples", "mwe", "en", "data_backup", "flower_dataset_all_final_train.tsv")
+    test_f = os.path.join(".", "examples", "mwe", "en", "data_backup", "flower_dataset_all_final_test.tsv")
 
     df_train = pd.read_csv(train_f, sep='\t')
     df_gold = pd.read_csv(test_f, sep='\t')
