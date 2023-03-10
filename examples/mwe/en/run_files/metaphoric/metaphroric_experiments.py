@@ -40,4 +40,4 @@ model.train_model(df_train)
 
 result, model_outputs, preds_list = model.eval_model(df_test)
 
-metrics.classification_report(df_test['labels'].tolist(), preds_list, digits=4)
+metrics.classification_report(df_test['labels'].tolist(), [tag for lst in preds_list for tag in lst], digits=4)
