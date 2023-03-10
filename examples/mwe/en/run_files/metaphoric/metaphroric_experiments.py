@@ -29,7 +29,7 @@ model = NERModel(
           "reprocess_input_data": True,
           "num_train_epochs": 3,
           "train_batch_size": 32,
-          "wandb_project": 'metaphoric_flowers',
+          # "wandb_project": 'metaphoric_flowers',
           "use_multiprocessing": False,
           "use_multiprocessing_for_evaluation": False
           },

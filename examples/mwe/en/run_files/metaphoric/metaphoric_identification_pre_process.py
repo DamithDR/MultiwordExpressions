@@ -76,7 +76,7 @@ test_df['sentence_id'] = [id for sent in sentence_wise_ids_test for id in sent]
 training_df.to_csv('examples/mwe/en/data/metaphoric/processed/train.tsv', sep='\t', index=False)
 test_df.to_csv('examples/mwe/en/data/metaphoric/processed/test.tsv', sep='\t', index=False)
 with open('examples/mwe/en/data/metaphoric/processed/test.txt', 'w') as f:
-    s_lst = '\n'.join(sentence_list)
+    s_lst = '\n'.join(sentence_test)
     f.write(s_lst)
 
 # total training 38986 - only O - 37866
