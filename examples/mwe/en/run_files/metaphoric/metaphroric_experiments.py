@@ -57,7 +57,7 @@ for model_name, model_type in zip(model_names_list,model_types_list):
 
     result, model_outputs, preds_list = model.eval_model(df_test)
 
-    with open('metaphoricresults/' + str(args.model_name).replace('/', '-') + '-results.txt', 'w') as f:
+    with open('metaphoricresults/' + str(model_name).replace('/', '-') + '-results.txt', 'w') as f:
         f.write(
             metrics.classification_report(df_test['labels'].tolist(), [tag for lst in preds_list for tag in lst],
                                           digits=6))
