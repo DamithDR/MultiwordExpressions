@@ -35,8 +35,8 @@ else:
 
 for model_name, model_type in zip(model_types_list, model_types_list):
     model = NERModel(
-        model_type=args.model_type,
-        model_name=args.model_name,
+        model_type=model_name,
+        model_name=model_type,
         labels=["O", "B", "I"],
         use_cuda=torch.cuda.is_available(),
         cuda_device=args.cuda_device,
