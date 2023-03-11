@@ -8,8 +8,8 @@ from mwe.transformers.ner_model import NERModel
 
 parser = argparse.ArgumentParser(
     description='''evaluates models on metaphoric names identification task''')
-parser.add_argument('--model_type', required=True, help='model type')
-parser.add_argument('--model_name', required=True, help='model name')
+parser.add_argument('--model_type', required=False, help='model type')
+parser.add_argument('--model_name', required=False, help='model name')
 parser.add_argument('--cuda_device', required=False, help='cuda_device', default=0)
 args = parser.parse_args()
 
