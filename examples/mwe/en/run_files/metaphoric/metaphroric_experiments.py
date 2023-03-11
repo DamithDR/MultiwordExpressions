@@ -26,7 +26,7 @@ if args.model_name is None or args.model_type is None:
                         'bert-base-cased', 'bert-large-cased', 'bert-large-uncased',
                         'google/electra-base-discriminator',
                         'allenai/scibert_scivocab_uncased', 'allenai/scibert_scivocab_cased']
-    model_types_list = ['xlm-roberta', 'xlm-roberta', 'xlnet', 'roberta', 'bert', 'bert', 'bert', 'bert', 'bert',
+    model_types_list = ['xlmroberta', 'xlmroberta', 'xlnet', 'roberta', 'bert', 'bert', 'bert', 'bert', 'bert',
                         'bert',
                         'electra', 'bert', 'bert']
 else:
