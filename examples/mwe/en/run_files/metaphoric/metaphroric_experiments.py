@@ -33,7 +33,7 @@ else:
     model_names_list = [args.model_name]
     model_types_list = [args.model_type]
 
-for model_name, model_type in zip(model_types_list, model_types_list):
+for model_name, model_type in zip(model_names_list,model_types_list):
 
     print(f'running experiment on {model_name}')
 
