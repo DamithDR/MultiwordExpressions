@@ -56,6 +56,7 @@ model = T5Model(args.model_type, args.model_name, args=model_args)
 model.train_model(train_df)
 
 preds_list = model.predict(test_data)
+print(preds_list)
 
 with open('metaphoricresults/' + str(args.model_name).replace('/', '-') + '-results.txt', 'w') as f:
     f.write(
