@@ -1,2 +1,4 @@
 python -m examples.mwe.en.run_files.metaphoric.metaphroric_experiments --model_type bert --model_name bert-base-cased
 python -m examples.mwe.en.run_files.mwe.mwe_experiments --model_type bert --model_name bert-base-cased
+
+examples/mwe/en/run_files/metaphoric/metaphroric_T5experiments
