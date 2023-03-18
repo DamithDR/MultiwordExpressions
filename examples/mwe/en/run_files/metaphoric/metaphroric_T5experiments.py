@@ -33,9 +33,11 @@ for train_id in train_sentence_ids:
     subset = df_train.loc[df_train['sentence_id'] == train_id]
     train_data.append([TASK_NAME, ' '.join(subset['words'].tolist()), ' '.join(subset['labels'].tolist())])
 
+predict_compare_list = []
 for test_id in test_sentence_ids:
     subset = df_test.loc[df_test['sentence_id'] == test_id]
-    test_data.append(TASK_NAME + ": " ' '.join(subset['words'].tolist()))
+    test_data.append(TASK_NAME + ": " + ' '.join(subset['words'].tolist()))
+    predict_compare_list.append(subset['labels'].tolist())
 
 train_df = pd.DataFrame(train_data)
 train_df.columns = ["prefix", "input_text", "target_text"]
@@ -45,10 +47,10 @@ model_args = T5Args()
 model_args.num_train_epochs = int(args.epochs)
 model_args.no_save = True
 model_args.overwrite_output_dir = True
-model_args.use_multiprocessing=False
-model_args.use_multiprocessing_for_evaluation=False
-model_args.use_multiprocessed_decoding=False
-model_args.multiprocessing_chunksize=False
+model_args.use_multiprocessing = False
+model_args.use_multiprocessing_for_evaluation = False
+model_args.use_multiprocessed_decoding = False
+model_args.multiprocessing_chunksize = False
 
 model = T5Model(args.model_type, args.model_name, args=model_args)
 
@@ -56,9 +58,10 @@ model = T5Model(args.model_type, args.model_name, args=model_args)
 model.train_model(train_df)
 
 preds_list = model.predict(test_data)
-print(preds_list)
 
 with open('metaphoricresults/' + str(args.model_name).replace('/', '-') + '-results.txt', 'w') as f:
     f.write(
-        metrics.classification_report(df_test['labels'].tolist(), [tag for lst in preds_list for tag in lst.split(' ')],
+        # metrics.classification_report(df_test['labels'].tolist(), [tag for lst in preds_list for tag in lst.split(' ')],
+        metrics.classification_report([tag for lst in predict_compare_list for tag in lst],
+                                      [tag for lst in preds_list for tag in lst.split(' ')],
                                       digits=6))
