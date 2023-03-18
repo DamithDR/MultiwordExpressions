@@ -1,4 +1,5 @@
 import argparse
+import json
 
 import pandas as pd
 import torch
@@ -60,7 +61,7 @@ model = T5Model("t5", "t5-base", args=model_args)
 result = model.eval_model(eval_df)
 
 with open('T5-result-sample.txt','w') as f:
-    f.write(result)
+    json.dump(result, f)
 
 # # Make predictions with the model
 # to_predict = [
