@@ -60,5 +60,5 @@ print(preds_list)
 
 with open('metaphoricresults/' + str(args.model_name).replace('/', '-') + '-results.txt', 'w') as f:
     f.write(
-        metrics.classification_report(df_test['labels'].tolist(), [tag for lst in preds_list for tag in lst],
+        metrics.classification_report(df_test['labels'].tolist(), [tag for lst in preds_list for tag in lst.split(' ')],
                                       digits=6))
