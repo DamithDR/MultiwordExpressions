@@ -13,6 +13,7 @@ parser = argparse.ArgumentParser(
     description='''evaluates models on metaphoric names identification task''')
 parser.add_argument('--model_type', required=False, help='model type')
 parser.add_argument('--model_name', required=False, help='model name')
+parser.add_argument('--epochs', required=False, help='no of epochs')
 parser.add_argument('--cuda_device', required=False, help='cuda_device', default=0)
 args = parser.parse_args()
 
@@ -39,12 +40,12 @@ for test_id in test_sentence_ids:
 train_df = pd.DataFrame(train_data)
 train_df.columns = ["prefix", "input_text", "target_text"]
 
-eval_df = pd.DataFrame(test_data[:100])
+eval_df = pd.DataFrame(test_data)
 eval_df.columns = ["prefix", "input_text", "target_text"]
 
 # Configure the model
 model_args = T5Args()
-model_args.num_train_epochs = 20
+model_args.num_train_epochs = int(args.epochs)
 model_args.no_save = True
 
 model = T5Model(args.model_type, args.model_name, args=model_args)
