@@ -45,6 +45,10 @@ model_args = T5Args()
 model_args.num_train_epochs = int(args.epochs)
 model_args.no_save = True
 model_args.overwrite_output_dir = True
+model_args.use_multiprocessing=False
+model_args.use_multiprocessing_for_evaluation=False
+model_args.use_multiprocessed_decoding=False
+model_args.multiprocessing_chunksize=False
 
 model = T5Model(args.model_type, args.model_name, args=model_args)
 
