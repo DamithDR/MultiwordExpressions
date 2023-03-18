@@ -44,6 +44,7 @@ train_df.columns = ["prefix", "input_text", "target_text"]
 model_args = T5Args()
 model_args.num_train_epochs = int(args.epochs)
 model_args.no_save = True
+model_args.overwrite_output_dir = True
 
 model = T5Model(args.model_type, args.model_name, args=model_args)
 
