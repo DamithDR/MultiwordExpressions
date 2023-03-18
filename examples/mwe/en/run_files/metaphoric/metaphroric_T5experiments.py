@@ -25,55 +25,36 @@ train_sentence_ids = set(df_train['sentence_id'].tolist())
 test_sentence_ids = set(df_test['sentence_id'].tolist())
 TASK_NAME = 'token classification'
 
-
 train_data = []
 test_data = []
 
 for train_id in train_sentence_ids:
     subset = df_train.loc[df_train['sentence_id'] == train_id]
-    train_data.append([TASK_NAME,' '.join(subset['words'].tolist()), ' '.join(subset['labels'].tolist())])
+    train_data.append([TASK_NAME, ' '.join(subset['words'].tolist()), ' '.join(subset['labels'].tolist())])
 
 for test_id in test_sentence_ids:
     subset = df_test.loc[df_test['sentence_id'] == test_id]
-    test_data.append([TASK_NAME,' '.join(subset['words'].tolist()), ' '.join(subset['labels'].tolist())])
+    test_data.append([TASK_NAME, ' '.join(subset['words'].tolist())])
 
 train_df = pd.DataFrame(train_data)
 train_df.columns = ["prefix", "input_text", "target_text"]
-
 
 eval_df = pd.DataFrame(test_data[:100])
 eval_df.columns = ["prefix", "input_text", "target_text"]
 
 # Configure the model
 model_args = T5Args()
-model_args.num_train_epochs = 200
+model_args.num_train_epochs = 20
 model_args.no_save = True
-model_args.evaluate_generated_text = True
-model_args.evaluate_during_training = True
-model_args.evaluate_during_training_verbose = True
 
-model = T5Model("t5", "t5-base", args=model_args)
+model = T5Model(args.model_type, args.model_name, args=model_args)
 
 # Train the model
-# model.train_model(train_df, eval_data=eval_df)
+model.train_model(train_df)
 
-# Evaluate the model
-result = model.eval_model(eval_df)
+preds_list = model.predict(test_data)
 
-with open('T5-result-sample.txt','w') as f:
-    json.dump(result, f)
-
-# # Make predictions with the model
-# to_predict = [
-#     "binary classification: Luke blew up the first Death Star",
-#     "generate question: In 1971, George Lucas wanted to film an adaptation of the Flash Gordon serial, but could not obtain the rights, so he began developing his own space opera.",
-# ]
-
-# preds = model.predict(to_predict)
-
-
-
-# with open('metaphoricresults/' + str(model_name).replace('/', '-') + '-results.txt', 'w') as f:
-#     f.write(
-#         metrics.classification_report(df_test['labels'].tolist(), [tag for lst in preds_list for tag in lst],
-#                                       digits=6))
+with open('metaphoricresults/' + str(args.model_name).replace('/', '-') + '-results.txt', 'w') as f:
+    f.write(
+        metrics.classification_report(df_test['labels'].tolist(), [tag for lst in preds_list for tag in lst],
+                                      digits=6))
