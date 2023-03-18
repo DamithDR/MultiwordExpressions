@@ -35,7 +35,7 @@ for train_id in train_sentence_ids:
 
 for test_id in test_sentence_ids:
     subset = df_test.loc[df_test['sentence_id'] == test_id]
-    test_data.append([TASK_NAME + ": " ' '.join(subset['words'].tolist())])
+    test_data.append(TASK_NAME + ": " ' '.join(subset['words'].tolist()))
 
 train_df = pd.DataFrame(train_data)
 train_df.columns = ["prefix", "input_text", "target_text"]
@@ -53,7 +53,7 @@ model_args.multiprocessing_chunksize=False
 model = T5Model(args.model_type, args.model_name, args=model_args)
 
 # Train the model
-model.train_model(train_df)
+# model.train_model(train_df)
 
 preds_list = model.predict(test_data)
 
