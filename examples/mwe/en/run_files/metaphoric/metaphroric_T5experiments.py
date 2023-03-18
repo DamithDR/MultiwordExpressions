@@ -53,7 +53,7 @@ model_args.multiprocessing_chunksize=False
 model = T5Model(args.model_type, args.model_name, args=model_args)
 
 # Train the model
-# model.train_model(train_df)
+model.train_model(train_df)
 
 preds_list = model.predict(test_data)
 
