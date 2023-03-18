@@ -35,13 +35,10 @@ for train_id in train_sentence_ids:
 
 for test_id in test_sentence_ids:
     subset = df_test.loc[df_test['sentence_id'] == test_id]
-    test_data.append([TASK_NAME, ' '.join(subset['words'].tolist())])
+    test_data.append([TASK_NAME + ": " ' '.join(subset['words'].tolist())])
 
 train_df = pd.DataFrame(train_data)
 train_df.columns = ["prefix", "input_text", "target_text"]
-
-eval_df = pd.DataFrame(test_data)
-eval_df.columns = ["prefix", "input_text", "target_text"]
 
 # Configure the model
 model_args = T5Args()
