@@ -17,8 +17,8 @@ parser.add_argument('--epochs', required=False, help='no of epochs')
 parser.add_argument('--cuda_device', required=False, help='cuda_device', default=0)
 args = parser.parse_args()
 
-df_train = pd.read_csv('examples/mwe/en/data/metaphoric/processed/train.tsv', sep='\t')
-df_test = pd.read_csv('examples/mwe/en/data/metaphoric/processed/test.tsv', sep='\t')
+df_train = pd.read_csv('examples/mwe/en/data/metaphoric/processed/spanish_test.tsv', sep='\t')
+df_test = pd.read_csv('examples/mwe/en/data/metaphoric/processed/spanish_test.tsv', sep='\t')
 with open('examples/mwe/en/data/metaphoric/processed/test.txt', 'r') as f:
     test_sentences = f.readlines()
 

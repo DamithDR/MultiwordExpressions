@@ -9,7 +9,7 @@ with open('examples/mwe/en/data/metaphoric/processed/test.txt', 'r') as file:
 
 responses = []
 # 217,255,304
-for sentence in sentences[304:]:
+for sentence in sentences:
     message = "is there a metaphoric flower name or metaphoric plant name included in the following sentence, say yes or no, if yes what is the metaphoric flower or metaphoric plant names in the sentence seperately : " + sentence
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",

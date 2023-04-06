@@ -1,10 +1,12 @@
+import sys
+
 import numpy as np
 import pandas as pd
 
 from examples.mwe.en.utils.sentence_utils import get_sentences, set_sequence_and_clean
 
-train_f = 'examples/mwe/en/data/metaphoric/metaphoric_train.tsv'
-test_f = 'examples/mwe/en/data/metaphoric/metaphoric_test.tsv'
+train_f = 'examples/mwe/en/data/metaphoric/raw/spanish_train.tsv'
+test_f = 'examples/mwe/en/data/metaphoric/raw/spanish_test.tsv'
 
 train_df = pd.read_csv(train_f, sep='\t')
 test_df = pd.read_csv(test_f, sep='\t')
@@ -31,10 +33,15 @@ for tok_list, sent in zip(all_tokens, all_sentences):
         bi_sentences.append(sent)
         bi_tokens.append(tok_list)
 
+
+print(len(all_sentences))
+print(len(o_sentences))
+print(len(bi_sentences))
+sys.exit(0)
 # check the number of sentences here
 
-o_sentences = o_sentences[:600]
-o_tokens = o_tokens[:600]
+o_sentences = o_sentences[:101]
+o_tokens = o_tokens[:101]
 
 bi_sentences += o_sentences
 bi_tokens += o_tokens
@@ -73,8 +80,8 @@ test_df['labels'] = [tag for tk_lst in token_test for tag in tk_lst]
 sentence_wise_ids_test = [[i] * len(sentence_test[i].split(' ')) for i in range(0, len(sentence_test))]
 test_df['sentence_id'] = [id for sent in sentence_wise_ids_test for id in sent]
 
-training_df.to_csv('examples/mwe/en/data/metaphoric/processed/train.tsv', sep='\t', index=False)
-test_df.to_csv('examples/mwe/en/data/metaphoric/processed/test.tsv', sep='\t', index=False)
+training_df.to_csv('examples/mwe/en/data/metaphoric/processed/spanish_test.tsv', sep='\t', index=False)
+test_df.to_csv('examples/mwe/en/data/metaphoric/processed/spanish_test.tsv', sep='\t', index=False)
 with open('examples/mwe/en/data/metaphoric/processed/test.txt', 'w') as f:
     s_lst = '\n'.join(sentence_test)
     f.write(s_lst)
