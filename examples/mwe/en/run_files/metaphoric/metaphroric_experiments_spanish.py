@@ -50,7 +50,7 @@ for model_name, model_type in zip(model_names_list,model_types_list):
     )
 
     # Train the model
-    model.train_model(df_train)
+    # model.train_model(df_train)
 
     result, model_outputs, preds_list = model.eval_model(df_test)
 

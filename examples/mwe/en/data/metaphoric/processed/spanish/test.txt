@@ -101,7 +101,7 @@ Familia: Arecaceae (Palmae) Nombre común: Marfil vegetal
 Nombre común: Coco plumoso
 Muy empleado como ornamental y en repoblaciones forestales
 Nombre común: Árbol orquídea, Pata de vaca Orchid tree Lugar de origen: Asia tropical
-& Hook nan
+& Hook
 Nombre común: Jabonero de China, árbol de los farolitos
 Descripción: Su origen se halla en la finca de Masjoan, situada en Espinelves, en el centro del macizo del Montseny, una masía con más de 300 años de antigüedad
 Zonas 9 a 11 WODYETIA BIFURCATA A
@@ -205,7 +205,7 @@ de longitud y 2-4 cm
 Familia: Moraceae Nombre común: Higuera sagrada Sacred fig Lugar de origen: India, sur de Asia
 Crista-galli, proviene del latín y significa cresta de gallo, aludiendo a la forma de sus flores de color rojo
 Cook Familia: Arecaceae (Palmae) Nombre común: Palmera real de Puerto Rico
-textilis, nativa de Filipinas, donde obtienen de ella una fibra conocida por abaca, STRELITZIACEAS Comprende tres géneros nan
+textilis, nativa de Filipinas, donde obtienen de ella una fibra conocida por abaca, STRELITZIACEAS Comprende tres géneros
 ) Franco Nombre común: Ciprés llorón chino, ciprés fúnebre
 Piña ovoide-cónica, colgante, de 5-10 cm de longitud, de color marrón claro, con brácteas trífidas que sobresalen entre las escamas de la piña
 Requiere climas y suelos frescos y húmedos, además de ligeramente ácidos
