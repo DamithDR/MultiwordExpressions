@@ -21,15 +21,16 @@ with open('examples/mwe/en/data/metaphoric/processed/spanish/test.txt', 'r') as 
 
 if args.model_name is None or args.model_type is None:
 
-    model_names_list = ['xlm-roberta-base', 'xlm-roberta-large',
-                        'bert-base-multilingual-cased', 'bert-base-multilingual-uncased']
-    model_types_list = ['xlmroberta', 'xlmroberta', 'bert', 'bert']
+    # model_names_list = ['xlm-roberta-base', 'xlm-roberta-large',
+    #                     'bert-base-multilingual-cased', 'bert-base-multilingual-uncased']
+    model_names_list = ['bert-base-multilingual-cased', 'bert-base-multilingual-uncased']
+    # model_types_list = ['xlmroberta', 'xlmroberta', 'bert', 'bert']
+    model_types_list = ['bert', 'bert']
 else:
     model_names_list = [args.model_name]
     model_types_list = [args.model_type]
 
-for model_name, model_type in zip(model_names_list,model_types_list):
-
+for model_name, model_type in zip(model_names_list, model_types_list):
     print(f'running experiment on {model_name}')
 
     model = NERModel(
@@ -50,9 +51,9 @@ for model_name, model_type in zip(model_names_list,model_types_list):
     # Train the model
     model.train_model(df_train)
 
-    result, model_outputs, preds_list = model.eval_model(df_test)
+    n_list = df_test.loc[df_test['sentence_id'] == '']
 
+    result, model_outputs, preds_list, truth, preds = model.eval_model(df_test)
     with open('metaphoricresults/' + str(model_name).replace('/', '-') + '-results-spanish.txt', 'w') as f:
         f.write(
-            metrics.classification_report(df_test['labels'].tolist(), [tag for lst in preds_list for tag in lst],
-                                          digits=6))
+            metrics.classification_report(truth, preds, digits=6))

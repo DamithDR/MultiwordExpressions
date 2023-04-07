@@ -1183,7 +1183,7 @@ class NERModel:
 
         eval_dataset = self.load_and_cache_examples(eval_data, evaluate=True)
 
-        result, model_outputs, preds_list = self.evaluate(
+        result, model_outputs, preds_list,truth,preds = self.evaluate(
             eval_dataset,
             output_dir,
             verbose=verbose,
@@ -1196,7 +1196,7 @@ class NERModel:
         if verbose:
             logger.info(self.results)
 
-        return result, model_outputs, preds_list
+        return result, model_outputs, preds_list,truth,preds
 
     def evaluate(
         self,
@@ -1372,8 +1372,10 @@ class NERModel:
                 preds,
                 labels=labels_list,
             )
+        truth = [tag for out in out_label_list for tag in out]
+        preds = [tag for pred_out in preds_list for tag in pred_out]
 
-        return results, model_outputs, preds_list
+        return results, model_outputs, preds_list,truth,preds
 
     def predict(self, to_predict, split_on_space=True):
         """
