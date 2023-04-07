@@ -21,11 +21,11 @@ with open('examples/mwe/en/data/metaphoric/processed/spanish/test.txt', 'r') as 
 
 if args.model_name is None or args.model_type is None:
 
-    # model_names_list = ['xlm-roberta-base', 'xlm-roberta-large',
-    #                     'bert-base-multilingual-cased', 'bert-base-multilingual-uncased']
-    model_names_list = ['bert-base-multilingual-cased', 'bert-base-multilingual-uncased']
-    # model_types_list = ['xlmroberta', 'xlmroberta', 'bert', 'bert']
-    model_types_list = ['bert', 'bert']
+    model_names_list = ['xlm-roberta-base', 'xlm-roberta-large',
+                        'bert-base-multilingual-cased', 'bert-base-multilingual-uncased']
+    # model_names_list = ['bert-base-multilingual-cased', 'bert-base-multilingual-uncased']
+    model_types_list = ['xlmroberta', 'xlmroberta', 'bert', 'bert']
+    # model_types_list = ['bert', 'bert']
 else:
     model_names_list = [args.model_name]
     model_types_list = [args.model_type]
