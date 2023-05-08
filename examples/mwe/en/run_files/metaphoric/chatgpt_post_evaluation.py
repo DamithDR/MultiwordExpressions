@@ -1,13 +1,23 @@
 import re
+import sys
 
 import pandas as pd
 from sklearn import metrics
-df_train = pd.read_csv('examples/mwe/en/data/metaphoric/processed/spanish_test.tsv', sep='\t')
-df_test = pd.read_csv('examples/mwe/en/data/metaphoric/processed/spanish_test.tsv', sep='\t')
-with open('examples/mwe/en/data/metaphoric/processed/test.txt', 'r') as f:
+# df_train = pd.read_csv('examples/mwe/en/data/metaphoric/processed/spanish_test.tsv', sep='\t')
+# df_test = pd.read_csv('examples/mwe/en/data/metaphoric/processed/spanish_test.tsv', sep='\t')
+# with open('examples/mwe/en/data/metaphoric/processed/test.txt', 'r') as f:
+#     test_sentences = f.readlines()
+#
+# with open('examples/mwe/en/responses/metaphoric/chatgpt_reponses.txt', 'r') as f:
+#     responses = f.readlines()
+
+
+# df_train = pd.read_csv('examples/mwe/en/data/metaphoric/processed/spanish_test.tsv', sep='\t')
+df_test = pd.read_csv('examples/mwe/en/data/metaphoric/processed/spanish/spanish_test.tsv', sep='\t')
+with open('examples/mwe/en/data/metaphoric/processed/spanish/test.txt', 'r') as f:
     test_sentences = f.readlines()
 
-with open('examples/mwe/en/responses/metaphoric/chatgpt_reponses.txt', 'r') as f:
+with open('spanish-resp.txt', 'r') as f:
     responses = f.readlines()
 
 regex_list = [
@@ -65,6 +75,44 @@ regex_list = [
     r"Yes, there are two metaphoric plant names in the sentence:1. \"(?P<plant_name>[a-zA-Z ]+)\"",
     r"Yes. Metaphoric plant name: \"(?P<plant_name>[a-zA-Z .]+)\"",
     r"Yes. The metaphoric flower name is \"(?P<flower_name>[a-zA-Z -]+),\" as it",
+    r"Yes, there are two metaphoric plant names included in the given sentence: \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -]+)\" and \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -]+)\".",
+    r"Yes, the metaphoric flower name included in the sentence is \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -]+)\"",
+    r"Yes, there is a metaphoric plant name in the sentence - \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -]+)\".",
+    r"Yes, there is a metaphoric plant name included in the sentence, which is \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -]+)\".",
+    r"Yes, there is a metaphoric plant name in the sentence, which is \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -]+)\".",
+    r"Yes, the sentence includes a metaphoric plant name \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -]+)\" which means",
+    r"Yes, there is a metaphoric flower name in the sentence, which is \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -]+)\".",
+    r"Yes, there are metaphoric plant names in the sentence. The metaphoric plant names are \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -]+)\" and \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -]+)\".",
+    r"Yes, the metaphoric plant name in the sentence is \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -]+)\", which translates to",
+    r"Yes, The metaphoric plant name is \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -,]+)\" which literally translates to",
+    r"Yes, The metaphoric plant name is \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -,]+)\" which translates to",
+    r"Yes, The metaphoric plant name is \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -,]+)\" which is a common",
+    r"Yes, There is a metaphoric plant name included in the sentence: \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -,]+)\".",
+    r"Yes, \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -,]+)\" \(vegetable ivory\) is a metaphoric plant name.",
+    r"Yes, there is a metaphoric plant name included in the sentence - \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -,]+)\"",
+    r"Yes, (?P<plant_name>[a-zA-Z\u0080-\uFFFF -,]+) and (?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)",
+    r"Yes, there are several metaphoric plant names in the sentence: \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\", \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -,]+)\",",
+    r"Yes, the metaphoric plant name included in the sentence is \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\".",
+    r"Yes, there is a metaphoric plant name in the sentence. The (?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+) can be considered a metaphoric plant name.",
+    r"Yes, the sentence includes a metaphoric plant name: \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\" refers to",
+    r"Yes, there is a metaphoric plant name included in the sentence: \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\".",
+    r"Yes, The metaphoric plant name is \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\" which means ",
+    r"Yes, there is a metaphoric plant name included in the sentence which is \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\"",
+    r"Yes, there are two metaphoric plant names in the sentence: \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\"",
+    r"Yes, the metaphoric plant name in the sentence is \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\"",
+    r"Yes, \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\" is a metaphoric plant name,",
+    r"Yes, the metaphoric plant name is \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\"",
+    r"Yes, there is a metaphoric plant name included in the sentence. The plant is commonly known as \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\" which means",
+    r"Yes, there are metaphoric plant names in the sentence: \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\" and \"(?P<plant_name>[a-zA-Z\u0080-\uFFFF -,]+)\"",
+    r"Yes, \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\" can be considered a metaphoric plant name as it",
+    r"Yes, there is a metaphoric flower name in the sentence. The metaphoric flower name is \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\" which means",
+    r"Yes, \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\" \(wine palm\) is a",
+    r"Yes, there is a metaphoric flower name included in the sentence. The metaphoric flower name is \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\" which means",
+    r"Yes, there is a metaphoric plant name in the sentence which is \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\".",
+    r"Yes, there is a metaphoric plant name in the sentence: \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\" \(Sacred fig\)",
+    r"Yes, there is a metaphoric flower name in the sentence: (?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+).",
+    r"Yes, there is a metaphoric plant name in the sentence. The metaphoric plant name is \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,]+)\",",
+    r"Yes, there is a metaphoric plant name included in the sentence, which is \"(?P<flower_name>[a-zA-Z\u0080-\uFFFF -,.]+)\"",
 ]
 
 # m = re.match(r"(?P<first_name>\w+) ABC (?P<last_name>\w+)", "Malcom ABC Reynolds sbc")
@@ -128,7 +176,7 @@ for sentence, response in zip(test_sentences, responses):
 
 print(len(no_regex_list))
 
-with open('not_captured.txt','w')as f:
+with open('not_captured_spanish.txt','w')as f:
     f.writelines(no_regex_list)
 print(no_regex_list)
 
@@ -136,7 +184,7 @@ print(f'no of tokens {len(final_tag_list)}')
 
 print(f'tokens in test set = {len(df_test["labels"])}')
 
-with open('chatgpt-metaphoric-results.txt', 'w') as f:
+with open('chatgpt-metaphoric-results-spanish.txt', 'w') as f:
     f.write(
         metrics.classification_report(df_test['labels'].tolist(), [tag for lst in final_tag_list for tag in lst],
                                       digits=6))

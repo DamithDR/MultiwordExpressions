@@ -1,10 +1,13 @@
+import sys
 import time
 
 import openai
 
 openai.api_key = input("Please enter your OpenAI API key")
 
-with open('examples/mwe/en/data/metaphoric/processed/test.txt', 'r') as file:
+# with open('examples/mwe/en/data/metaphoric/processed/test.txt', 'r') as file:
+#     sentences = file.readlines()
+with open('examples/mwe/en/data/metaphoric/processed/spanish/test.txt', 'r') as file:
     sentences = file.readlines()
 
 responses = []
@@ -20,7 +23,7 @@ for sentence in sentences:
     resp = response['choices'][0]['message']['content']
     resp = str(resp).replace('\n', '##')
     responses.append(resp)
-    with open('resp.txt', 'a') as f:
+    with open('spanish-resp.txt', 'a') as f:
         f.write(str(resp).replace('\n', '##') + '\n')
     print(resp)
     time.sleep(3)  # free version only allows 20requests/min
