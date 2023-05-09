@@ -33,8 +33,7 @@ else:
     model_names_list = [args.model_name]
     model_types_list = [args.model_type]
 
-for model_name, model_type in zip(model_names_list,model_types_list):
-
+for model_name, model_type in zip(model_names_list, model_types_list):
     print(f'running experiment on {model_name}')
 
     model = NERModel(
@@ -55,9 +54,8 @@ for model_name, model_type in zip(model_names_list,model_types_list):
     # Train the model
     model.train_model(df_train)
 
-    result, model_outputs, preds_list = model.eval_model(df_test)
+    result, model_outputs, preds_list, truths, preds = model.eval_model(df_test)
 
     with open('multiwordresults/' + str(model_name).replace('/', '-') + '-results.txt', 'w') as f:
         f.write(
-            metrics.classification_report(df_test['labels'].tolist(), [tag for lst in preds_list for tag in lst],
-                                          digits=6))
+            metrics.classification_report(truths, preds, digits=6))
