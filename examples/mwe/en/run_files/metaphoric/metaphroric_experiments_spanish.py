@@ -13,7 +13,7 @@ parser.add_argument('--model_name', required=False, help='model name')
 parser.add_argument('--cuda_device', required=False, help='cuda_device', default=0)
 args = parser.parse_args()
 
-df_train = pd.read_csv('examples/mwe/en/data/metaphoric/processed/train.tsv', sep='\t')
+df_train = pd.read_csv('examples/mwe/en/data/metaphoric/processed/spanish_train.tsv', sep='\t')
 df_test = pd.read_csv('examples/mwe/en/data/metaphoric/processed/spanish/spanish_test.tsv', sep='\t')
 test_sentences = []
 with open('examples/mwe/en/data/metaphoric/processed/spanish/test.txt', 'r') as f:
