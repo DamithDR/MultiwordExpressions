@@ -14,6 +14,7 @@ parser.add_argument('--cuda_device', required=False, help='cuda_device', default
 args = parser.parse_args()
 
 df_train = pd.read_csv('examples/mwe/en/data/mwe/processed/spanish/spanish_train.tsv', sep='\t')
+
 df_test = pd.read_csv('examples/mwe/en/data/mwe/processed/spanish/spanish_test.tsv', sep='\t')
 test_sentences = []
 with open('examples/mwe/en/data/mwe/processed/spanish/test.txt', 'r') as f:

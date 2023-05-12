@@ -1190,14 +1190,12 @@ su	O	16
 siembra	O	16
 ex	O	17
 Becc	B	17
-nan		17
 Familia:	O	18
 Cupressaceae	O	18
 Sinónimos:	O	18
 Cupressus	O	18
 leylandii	O	18
 Dallim	B	18
-nan		18
 Las	O	19
 dos	O	19
 especies	O	19
@@ -1372,7 +1370,6 @@ Zona	O	32
 RHUS	O	32
 TYPHINA	B	32
 L	I	32
-nan		32
 Flores	O	33
 masculinas	O	33
 en	O	33
@@ -1441,7 +1438,6 @@ ornamental	O	36
 Araucaria	B	37
 excelsa	I	37
 (Lamb	B	37
-nan		37
 Jacaranda	B	38
 mimosifolia	I	38
 Tabebuia	O	38
@@ -1504,7 +1500,6 @@ Sinónimos:	O	41
 Magnolia	O	41
 kobus	O	41
 var	B	41
-nan		41
 Callistemon	O	42
 viminalis	O	42
 Celtis	B	42
@@ -1637,7 +1632,6 @@ Zona	O	48
 LICUALA	B	48
 SPINOSA	I	48
 Thunb	B	48
-nan		48
 Su	O	49
 corteza	O	49
 se	O	49
@@ -1679,7 +1673,6 @@ a	O	53
 PRITCHARDIA	B	53
 HILLEBRANDII	I	53
 Becc	B	53
-nan		53
 Familia:	I	54
 Caesalpiniaceae	O	54
 (Leguminosae)	O	54
@@ -1864,7 +1857,6 @@ Zona	O	67
 TILIA	O	67
 HENRYANA	B	67
 Szysz	I	67
-nan		67
 Nombre	O	68
 común:	O	68
 Nogal	B	68
@@ -1926,7 +1918,6 @@ Thouin,	O	70
 Chaenomeles	O	70
 sinensis	B	70
 (Dum	I	70
-nan		70
 Rubra	O	71
 =	O	71
 Plumeria	B	71
@@ -2350,7 +2341,6 @@ Henry,	B	100
 Pinus	I	100
 eldarica	I	100
 Medw	B	100
-nan		100
 Seleccione	O	101
 la	O	101
 familia	O	101
@@ -3647,7 +3637,6 @@ en	O	173
 jardines	O	173
 ex	O	174
 H	B	174
-nan		174
 Familia:	O	175
 Juglandaceae	O	175
 Nombre	O	175
@@ -4308,7 +4297,6 @@ Sinónimos:	O	234
 Tetranthera	O	234
 californica	O	234
 Hook	B	234
-nan		234
 Descripción:	O	235
 Árbol	O	235
 de	O	235
@@ -4361,7 +4349,6 @@ Zona	O	239
 TAMARIX	O	239
 CHINENSIS	B	239
 Lour	I	239
-nan		239
 (Areca,	O	240
 Betel)	O	240
 Areca	B	240
@@ -4584,7 +4571,6 @@ a	O	258
 LIVISTONA	B	258
 DECIPIENS	I	258
 Becc	B	258
-nan		258
 Areca	B	259
 catechu	I	259
 L	O	259
@@ -4648,7 +4634,6 @@ Sinónimos:	O	266
 Ficus	O	266
 roxburghii	O	266
 Wall	B	266
-nan		266
 Familia:	O	267
 Arecaceae	O	267
 (Palmae)	O	267
@@ -4661,7 +4646,6 @@ Zona	O	268
 RICINUS	B	268
 COMMUNIS	I	268
 L	B	268
-nan		268
 Familia:	O	269
 Rosaceae	O	269
 Nombre	O	269
@@ -4890,7 +4874,6 @@ Zona	O	286
 HOHERIA	O	286
 SEXTYLOSA	B	286
 Col	I	286
-nan		286
 ILEX	B	287
 AQUIFOLIUM	I	287
 L	O	287
@@ -5336,7 +5319,6 @@ a	O	329
 ARBUTUS	O	329
 ANDRACHNE	B	329
 L	I	329
-nan		329
 Sus	O	330
 hojas	O	330
 tienen	O	330
@@ -5852,7 +5834,6 @@ Zona	O	372
 HIBISCUS	O	372
 ARNOTTIANUS	O	372
 A	B	372
-nan		372
 Nombre	O	373
 común:	O	373
 Aromo	B	373
@@ -5898,7 +5879,6 @@ Sinónimos:	O	379
 Ficus	O	379
 mysorensis	O	379
 B	B	379
-nan		379
 Descripción:	O	380
 Arbolito	O	380
 de	O	380
@@ -6381,7 +6361,6 @@ a	O	384
 JUNIPERUS	O	384
 VIRGINIANA	B	384
 L	I	384
-nan		384
 Cassia	B	385
 fistula	I	385
 L	O	385
@@ -6488,7 +6467,6 @@ Familia:	O	394
 Fagaceae	O	394
 Sinónimos:	O	394
 Q	B	394
-nan		394
 Zona	O	395
 7	O	395
 a	O	395
@@ -6655,7 +6633,6 @@ Zona	O	410
 ARENGA	O	410
 ENGLERI	O	410
 Becc	B	410
-nan		410
 Etimología:	O	411
 Prunus,	O	411
 nombre	O	411
@@ -7153,7 +7130,6 @@ Sinónimos:	O	423
 Acca	O	423
 sellowiana	B	423
 (O	I	423
-nan		423
 Otras	O	424
 en	O	424
 cambio,	O	424
@@ -7709,7 +7685,6 @@ Zona	O	459
 FICUS	O	459
 BURKEI	B	459
 Miq	I	459
-nan		459
 Ficus	B	460
 benjamina	I	460
 L	O	460
@@ -8621,7 +8596,6 @@ Zona	O	530
 CORDIA	O	530
 SEBESTENA	B	530
 L	I	530
-nan		530
 Nombre	O	531
 común:	O	531
 Taray	B	531
@@ -8656,7 +8630,6 @@ Sinónimos:	O	532
 Sabal	O	532
 princeps	O	532
 Hort	B	532
-nan		532
 Familia:	O	533
 Sapotaceae	O	533
 Sinónimos:	B	533
@@ -9480,7 +9453,6 @@ a	O	604
 LABURNUM	O	604
 ANAGYROIDES	B	604
 Medic	I	604
-nan		604
 Limonium	B	605
 brassicifolium	I	605
 Limonium	B	605
@@ -9889,7 +9861,6 @@ a	O	623
 ELAEIS	B	623
 GUINEENSIS	I	623
 Jacq	B	623
-nan		623
 La	O	624
 semilla	O	624
 mantiene	O	624
@@ -9967,7 +9938,6 @@ Zona	O	632
 HIBISCUS	B	632
 SYRIACUS	B	632
 L	I	632
-nan		632
 Zona	O	633
 7	O	633
 DIZYGOTHECA	B	633
@@ -9981,7 +9951,6 @@ Hort	O	634
 PALIURUS	O	635
 SPINA-CHRISTI	B	635
 Mill	I	635
-nan		635
 Nombre	O	636
 común:	O	636
 Palmera	B	636
@@ -10053,8 +10022,6 @@ Zona	O	643
 7	O	643
 ULMUS	O	643
 PUMILA	B	643
-L	I	643
-nan		643
 Saligna,	O	644
 alude	O	644
 a	O	644
@@ -10231,7 +10198,6 @@ Zona	O	654
 LIRIODENDRON	O	654
 TULIPIFERA	B	654
 L	I	654
-nan		654
 Zonas	O	655
 7	O	655
 a	O	655
@@ -10382,7 +10348,6 @@ leucocephala	I	673
 (Lam	O	673
 &	O	674
 H	B	674
-nan		674
 )	B	675
 Beentje	I	675
 &	I	675
@@ -11195,7 +11160,6 @@ Zona	O	708
 PARKINSONIA	B	708
 ACULEATA	I	708
 L	B	708
-nan		708
 Nombre	O	709
 común:	O	709
 Nashi,	O	709
@@ -11355,7 +11319,6 @@ Zona	O	726
 FICUS	O	726
 PALMERI	O	726
 S	B	726
-nan		726
 Flores	O	727
 femeninas	O	727
 en	O	727
@@ -11520,7 +11483,6 @@ Zonas	O	740
 BROWNEA	O	740
 GRANDICEPS	O	740
 Jacq	B	740
-nan		740
 Familia:	B	741
 Rosaceae	I	741
 Nombre	I	741
