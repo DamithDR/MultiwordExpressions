@@ -4,8 +4,7 @@ import time
 import openai
 import tiktoken as tiktoken
 
-# openai.api_key = input("Please enter your OpenAI API key : ")
-openai.api_key = "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"
+openai.api_key = input("Please enter your OpenAI API key : ")
 
 with open('examples/mwe/en/data/mwe/processed/test.txt', 'r') as file:
     sentences = file.readlines()
