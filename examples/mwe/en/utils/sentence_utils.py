@@ -50,7 +50,7 @@ def set_sequence_and_clean(df):
     df['sentence_id'] = seq
 
     cur_sid = 1
-    lst = df.index[df['token_id'] == 1].to_list()
+    lst = df.index[df['token_id'] == '1'].to_list()
     size = len(lst)
     for i in range(0, size):
         if i + 1 < size:

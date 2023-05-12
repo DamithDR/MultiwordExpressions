@@ -66,11 +66,17 @@ token_list = tok_arr.tolist()
 print(f'total number of sentences : {len(sentence_list)}')
 print(f'total number of tokens : {len(token_list)}')
 
-sentence_train = sentence_list
-# sentence_test = sentence_list[1500:2020]
+sentence_train = sentence_list[:750]
+sentence_test = sentence_list[750:]
 #
-token_train = token_list
-# token_test = token_list[1500:2020]
+token_train = token_list[:750]
+token_test = token_list[750:]
+
+test_df = pd.DataFrame()
+test_df['words'] = [word for sentence in sentence_test for word in sentence.split(' ')]
+test_df['labels'] = [tag for tk_lst in token_test for tag in tk_lst]
+sentence_wise_ids_test = [[i] * len(sentence_test[i].split(' ')) for i in range(0, len(sentence_test))]
+test_df['sentence_id'] = [id for sent in sentence_wise_ids_test for id in sent]
 
 training_df = pd.DataFrame()
 training_df['words'] = [word for sentence in sentence_train for word in sentence.split(' ')]
@@ -79,7 +85,8 @@ sentence_wise_ids_train = [[i] * len(sentence_train[i].split(' ')) for i in rang
 training_df['sentence_id'] = [id for sent in sentence_wise_ids_train for id in sent]
 
 #taking only test set as there are not many samples
-training_df.to_csv('examples/mwe/en/data/mwe/processed/spanish/spanish_test.tsv', sep='\t', index=False)
+test_df.to_csv('examples/mwe/en/data/mwe/processed/spanish/spanish_test.tsv', sep='\t', index=False)
+training_df.to_csv('examples/mwe/en/data/mwe/processed/spanish/spanish_train.tsv', sep='\t', index=False)
 with open('examples/mwe/en/data/mwe/processed/spanish/test.txt', 'w') as f:
-    s_lst = '\n'.join(sentence_list)
+    s_lst = '\n'.join(sentence_test)
     f.write(s_lst)
