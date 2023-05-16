@@ -85,7 +85,7 @@ sentence_wise_ids_train = [[i] * len(sentence_train[i].split(' ')) for i in rang
 training_df['sentence_id'] = [id for sent in sentence_wise_ids_train for id in sent]
 
 #taking only test set as there are not many samples
-test_df.to_csv('examples/mwe/en/data/mwe/processed/spanish/spanish_test.tsv', sep='\t', index=False)
+test_df.to_csv('examples/mwe/en/data/mwe/processed/spanish/spanish_test_new.tsv', sep='\t', index=False)
 training_df.to_csv('examples/mwe/en/data/mwe/processed/spanish/spanish_train.tsv', sep='\t', index=False)
 with open('examples/mwe/en/data/mwe/processed/spanish/test.txt', 'w') as f:
     s_lst = '\n'.join(sentence_test)

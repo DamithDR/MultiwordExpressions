@@ -21,10 +21,10 @@ Familia: Pinaceae Nombre común: Pino carrasco, pino de Alepo White fir, Colorad
 Familia: Malvaceae Nombre común: Hibisco marítimo
 Familia: Combretaceae Nombre común: Almendro de la India Lugar de origen: El árbol es nativo del sureste de Asia y hoy día se encuentra cultivado en todos los trópicos y subtrópicos
 Concolor = del mismo color por todos lados, opuesto a discolor
-Zona 7 ULMUS GLABRA Huds nan
+Zona 7 ULMUS GLABRA Huds
 Nombre común: Alerce, Alerce europeo Common larch, European larch Lugar de origen: Montañas de Centroeuropa y algunas zonas de llanura
 Zona 7 CITRUS MEDICA L
-Zona 10-11 AMELANCHIER CANADENSIS Medic nan
+Zona 10-11 AMELANCHIER CANADENSIS Medic
 Se refiere a su gran relación con otra especie
 Familia: Bignoniaceae Sinónimos: Stereospermum sinicum Hance Nombre común: Árbol serpiente
 Se cultiva al sol o a media sombra
@@ -50,7 +50,7 @@ Aiphanes caryotifolia (HBK
 Familia: Rosaceae Nombre común: Ciruelo mirobolano, ciruelo de Pissard, Pisardi Cherry plum, Myrobalan Lugar de origen: Oeste de Asia, Cáucaso
 Zona 7 PRUNUS AVIUM L
 Asclepias curassavica
-) L nan
+) L
 Familia: Aceraceae Nombre común: arce de los Balcanes, arce griego greek maple Lugar de origen: Nativo del norte de Grecia, la antigua Yugoslavia y Bulgaria
 , Ficus nitida Thunb
 Etimología: Acacia, del griego akis =punta, aludiendo a las espinas de las especies de acacias africanas, ya que las australianas normalmente carecen de ellas
@@ -131,7 +131,7 @@ Triacanthos, proviene del griego, y significa con tres espinas, debido a sus esp
 ) Franco Nombre común: Ciprés llorón chino, ciprés fúnebre
 Familia: Arecaceae (Palmae) Nombre común: Palmera de cola de pescado
 Requiere suelos de tipo medio y de ligeramente ácidos a neutros
-Familia: Cupressaceae Sinónimos: Chamaecyparis funebris (Endl nan
+Familia: Cupressaceae Sinónimos: Chamaecyparis funebris (Endl
 Subclase Liliidae Orden Liliales Familia Agavaceae Dracaena draco (3 fotos) Familia PINACEAE Familia de coníferas constituida por árboles normalmente monoicos y perennifolios, con frecuencia de gran talla, aunque en raras ocasiones son arbustos erguidos o rastreros
 Familia: Mimosaceae Nombre común: Arbusto de la llama Lugar de origen: Brasil
 Familia: Rhamnaceae Nombre común: Árbol de las pasas Japanese raisin tree Lugar de origen: Especie originaria de Japón, aunque extendida con amplitud por China y Corea
@@ -140,7 +140,7 @@ Nombre común: Butia lanosa Lugar de origen: Brasil
 Zona 9-10 DRACAENA DRACO (L
 8-1 cm de longitud, de color marrón, muy parecidas a las del algarrobo
 Zonas 10 a 11 PHOENIX CANARIENSIS Chabaud Familia: Arecaceae (Palmae) Nombre común: Palmera canaria
-Zonas 9 a 11 GREVILLEA ROBUSTA A nan
+Zonas 9 a 11 GREVILLEA ROBUSTA A
 Zonas 9 a 11 COCOS NUCIFERA L
 Familia: Bombacaceae Sinónimos: Carolinea insignis Swartz Nombre común: Castaño silvestre
 Arenga pinnata (Wurmb) Merr
@@ -188,7 +188,7 @@ Nombre común: Lima, limón dulce Lugar de origen: Especie nativa de la India y 
 Acoelorrhaphe wrightii (Griseb
 Sinensis, del latín sinensis-e = de la China
 Don Familia: Bignoniaceae Nombre común: Catalpa china Chinese catalpa Lugar de origen: China Etimología: Catalpa, antiguo nombre indio dado a una especie del género
-Comprende 6 especies nativas del Este de Asia, Sur de Europa y Norteamérica nan
+Comprende 6 especies nativas del Este de Asia, Sur de Europa y Norteamérica
 Zona 7 PICEA GLAUCA (Moench) Voss Familia: Pinaceae Sinónimos: Pinus glauca Moench Nombre común: Picea blanca White spruce Lugar de origen: Especie originaria del norte de EE
 Familia: Arecaceae (Palmae) Nombre común: Palmera de Fiji
 Las flores, que aparecen en primavera-verano, son variables en color, reconociéndose las siguientes formas: Acutifolia = Plumeria acutifolia, tiene la flor blanca y el centro con frecuencia amarillo
@@ -202,14 +202,14 @@ Familia: Eucommiaceae Nombre común: Árbol de la gutapercha Hardy rubber tree, 
 Nombre común: Níspero, Chico zapote Lugar de origen: Árbol nativo de Méjico, América Central y norte de Suramérica, donde se cultiva ampliamente
 La especie más conocida es, sin duda, Hibiscus rosa-sinensis o popularmente "Rosa de China", pero existen algunas otras especies más o menos cultivadas y conocidas de las que también vamos a tratar en este artículo
 Familia: Fabaceae (Leguminosae) Nombre común: Árbol coral
-Zona 7 SPATHODEA CAMPANULATA Beauv nan
+Zona 7 SPATHODEA CAMPANULATA Beauv
 Conos cilíndricos, erectos, de 14-17 cm de longitud, con exudaciones de resina
 Descripción: Árbol caducifolio de copa aparasolada, abierta y algo colgante, que llega a alcanzar alturas de 8-12 m, con la corteza gris llena de lenticelas marrones
 Familia: Sapindaceae Nombre común: Castaño de Méjico Lugar de origen: Es originario de Méjico
 = Beaucarnea recurvata Lem
 Nombre común: Árbol de Siris
 Nombre común: Acacia perfumada Sweet scented wattle Lugar de origen: Australia
-ex Camb nan
+ex Camb
 Nombre común: Árbol orquídea Orchid tree Lugar de origen: Nativo de Perú, Bolivia, Brasil, Uruguay, Paraguay y Argentina
 Familia: Pinaceae Nombre común: Pino marítimo, pino negral, pino resinero Maritime pine Lugar de origen: Ocupa un área bastante extensa en los países del Mediterráneo occidental y de la parte atlántica de Francia y Portugal
 Familia: Proteaceae Nombre común: Roble australiano, pino de oro
@@ -234,7 +234,7 @@ Zona 8 GESNOUINIA ARBOREA (L
 Zona 9 a 11 RHAPIS EXCELSA (Thunb
 Son pubescentes a lo largo del del nervio en el envés
 Nervio central destacado
-& Hook nan
+& Hook
 Familia: Pittosporaceae Nombre común: Pitosporo de bayas anaranjadas
 Zona 8 LICUALA GRANDIS H
 Calathea roseapicta Calathea rotundifolia Calathea veitchiana Calathea zebrina Calathea roseapicta (Linden) Regel, planta de unos 20 cm de altura con hojas anchamente ovales de 20 x 15 cm, obtusas
@@ -243,8 +243,8 @@ Subclase Rosidae Orden Rosales Familia Cunoniaceae Familia Pittosporaceae Pittos
 Dracaena surculosa Lindl
 Familia: Styracaceae Nombre común: Árbol de la charretera Lugar de origen: Japón y China
 Zona 7 ALLAGOPTERA ARENARIA (Gomes) Kuntze Familia: Arecaceae (Palmae) Sinónimos: Cocos arenaria Gomes Nombre común: Coco de playa
-Zona 9 EUCALYPTUS VIMINALIS Labill nan
+Zona 9 EUCALYPTUS VIMINALIS Labill
 Fruto en legumbre carnosa con estrangulaciones entre las semillas
-Zona 7 CEDRUS LIBANI A nan
+Zona 7 CEDRUS LIBANI A
 Zona 9 a 11
 Nombre común: Fresno de la tierra
